@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPOTIFY</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Left Sidebar -->
+    <div class="left">
+      <div class="home">
+        <div class="logo"><img src="logo.svg" alt="spotify"></div>
+        <ul>
+          <li><img src="home.svg" alt="home">Home</li>
+          <li><img src="search.svg" alt="search">Search</li>
+        </ul>
+      </div>
+
+      <div class="library">
+        <div class="heading">
+          <img src="playlist.svg" alt="playlist">
+          <h2>Your Library</h2>
+        </div>
+        <div class="song-list">
+          <ul></ul>
+        </div>
+        <div class="footer">
+          <div><a href="#">Legal</a></div>
+          <div><a href="#">Privacy Center</a></div>
+          <div><a href="#">Privacy Policy</a></div>
+          <div><a href="#">Cookies</a></div>
+          <div><a href="#">About Ads</a></div>
+          <div><a href="#">Accessibility</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+      <div class="header">
+        <svg class="hamburger" viewBox="0 0 100 100" width="35" height="35">
+          <rect width="100" height="100" rx="15" fill="green" />
+          <line x1="25" y1="35" x2="75" y2="35" stroke="black" stroke-width="8" stroke-linecap="round" />
+          <line x1="25" y1="50" x2="75" y2="50" stroke="black" stroke-width="8" stroke-linecap="round" />
+          <line x1="25" y1="65" x2="75" y2="65" stroke="black" stroke-width="8" stroke-linecap="round" />
+        </svg>
+        <div class="buttons">
+          <button class="signup">Sign up</button>
+          <button class="login">Log in</button>
+        </div>
+      </div>
+
+      <div class="spotify-playlists">
+        <h2>Spotify Playlists</h2>
+        <div class="card-container"></div>
+      </div>
+
+      <!-- Playbar -->
+      <div class="playbar">
+        <div class="song-info">No song playing</div>
+        <div class="song-buttons" style="display: flex; gap: 5px; align-items: center;">
+          <svg class="shuffle-icon" viewBox="0 0 100 100" width="45" height="45">
+            <circle cx="50" cy="50" r="48" fill="green" />
+            <path d="M25 35 C45 35, 55 65, 75 65" stroke="#000" stroke-width="5" stroke-linecap="round" />
+            <path d="M25 65 C45 65, 55 35, 75 35" stroke="#000" stroke-width="5" stroke-linecap="round" />
+            <polygon points="75,65 70,60 70,70" fill="#000" />
+            <polygon points="75,35 70,30 70,40" fill="#000" />
+          </svg>
+
+          <svg class="prev-song" viewBox="0 0 100 100" width="45" height="45">
+            <circle cx="50" cy="50" r="48" fill="green" />
+            <polygon points="60,30 40,50 60,70" fill="#000" />
+            <rect x="35" y="30" width="5" height="40" fill="#000" />
+          </svg>
+
+          <svg class="play-song" viewBox="0 0 100 100" width="45" height="45">
+            <circle cx="50" cy="50" r="48" fill="green" />
+            <polygon class="play-shape" points="40,30 40,70 70,50" fill="#000" />
+            <g class="pause-shape" style="display:none;">
+              <rect x="38" y="35" width="7" height="30" fill="#000" />
+              <rect x="55" y="35" width="7" height="30" fill="#000" />
+            </g>
+          </svg>
+
+          <svg class="next-song" viewBox="0 0 100 100" width="45" height="45">
+            <circle cx="50" cy="50" r="48" fill="green" />
+            <polygon points="40,30 60,50 40,70" fill="#000" />
+            <rect x="60" y="30" width="5" height="40" fill="#000" />
+          </svg>
+
+          <svg class="repeat-song" viewBox="0 0 100 100" width="45" height="45">
+            <circle cx="50" cy="50" r="48" fill="green" />
+            <path d="M30 40 H70 L65 35 M70 60 H30 L35 65" stroke="#000" stroke-width="5" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="song-time"></div>
+        <input type="range" class="seekbar" min="0" max="100" value="0">
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay for sidebar -->
+  <div class="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
